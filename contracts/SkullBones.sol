@@ -10,12 +10,10 @@ import "@openzeppelin/token/ERC20/ERC20.sol";
 
 
 contract SkullBones is ERC20 {
-    uint256 supply;
     address initOwner;
 
     constructor() ERC20("SkullBones", "SBT"){
         initOwner = msg.sender;
-        supply = 0;
      }
 
     function mintSBT(address _wallet, uint256 amount) public {
